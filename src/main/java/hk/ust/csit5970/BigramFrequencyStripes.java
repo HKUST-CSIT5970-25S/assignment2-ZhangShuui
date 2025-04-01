@@ -57,12 +57,8 @@ public class BigramFrequencyStripes extends Configured implements Tool {
 			if(words.length < 2) 
 				return; 
             for (int i = 0; i < words.length - 1; i++) {
-                String currentWord = words[i].replaceAll("[^a-zA-Z']", "")
-                                            .replaceAll("^'+", "")
-                                            .replaceAll("'+$", "");
-                String nextWord = words[i + 1].replaceAll("[^a-zA-Z']", "")
-                                              .replaceAll("^'+", "")
-                                              .replaceAll("'+$", "");
+                String currentWord = words[i];
+                String nextWord = words[i + 1];
 
                 if (currentWord.isEmpty() || nextWord.isEmpty()) {
                     continue;

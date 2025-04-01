@@ -56,12 +56,8 @@ public class BigramFrequencyPairs extends Configured implements Tool {
 			if(words.length < 2) 
 				return; 
 			for (int i = 0; i < words.length - 1; i++) {
-				String word1 = words[i].replaceAll("[^a-zA-Z']", "")
-									 .replaceAll("'+$", "")
-									 .replaceAll("^'+", "");
-				String word2 = words[i+1].replaceAll("[^a-zA-Z']", "")
-										.replaceAll("'+$", "")
-										.replaceAll("^'+", "");
+				String word1 = words[i];
+				String word2 = words[i+1];
 				
 				if (!word1.isEmpty() && !word2.isEmpty()) {
 					BIGRAM.set(word1, word2);
