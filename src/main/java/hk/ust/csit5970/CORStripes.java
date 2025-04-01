@@ -45,7 +45,7 @@ public class CORStripes extends Configured implements Tool {
 			 */
 			while (doc_tokenizer.hasMoreTokens()) {
                 // Convert tokens to lowercase.
-                String token = doc_tokenizer.nextToken().toLowerCase();
+                String token = doc_tokenizer.nextToken();
                 if (token.isEmpty()) continue;
                 if (wordCount.containsKey(token)) {
                     wordCount.put(token, wordCount.get(token) + 1);

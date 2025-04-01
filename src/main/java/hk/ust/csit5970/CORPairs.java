@@ -54,7 +54,7 @@ public class CORPairs extends Configured implements Tool {
 			 * TODO: Your implementation goes here.
 			 */
 			while (doc_tokenizer.hasMoreTokens()) {
-                String token = doc_tokenizer.nextToken().toLowerCase();
+                String token = doc_tokenizer.nextToken();
                 // Count each occurrence
                 if (wordCount.containsKey(token)) {
                     wordCount.put(token, wordCount.get(token) + 1);
@@ -102,7 +102,7 @@ public class CORPairs extends Configured implements Tool {
 			String line = value.toString();
 			Set<String> uniqueWords = new TreeSet<String>();
             while (doc_tokenizer.hasMoreTokens()) {
-                String token = doc_tokenizer.nextToken().toLowerCase();
+                String token = doc_tokenizer.nextToken();
                 if (!token.isEmpty()) {
                     uniqueWords.add(token);
                 }
